@@ -1,0 +1,234 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0b1d2f 0%, #1f3a5a 40%, #2d5f8d 100%);
+    color: #f4f7fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar__brand h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.topbar__brand p {
+    margin: 4px 0 0;
+    color: #c7d6eb;
+}
+
+.topbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-badge {
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    color: #f4f7fb;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button--primary {
+    background: #4f6cff;
+    color: #fff;
+}
+
+.button--secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4f7fb;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.dashboard {
+    width: min(1160px, 95%);
+    margin: 32px auto 48px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 28px;
+}
+
+.dashboard__section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.card--panel {
+    min-height: 420px;
+}
+
+.card--table {
+    padding: 24px;
+}
+
+.panel-header {
+    margin-bottom: 20px;
+}
+
+.panel-header h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.panel-header p {
+    margin: 0;
+    color: #d5dfea;
+}
+
+.form-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+label {
+    color: #d5dfea;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4f7fb;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(79, 108, 255, 0.9);
+    box-shadow: 0 0 0 4px rgba(79, 108, 255, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.table th,
+.table td {
+    padding: 16px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+.table thead th {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4f7fb;
+    font-weight: 700;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.table td {
+    color: #e7edf7;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.action-link {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f4f7fb;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background-color 0.2s ease;
+}
+
+.action-link:hover {
+    background: rgba(79, 108, 255, 0.22);
+}
+
+.action-link--danger {
+    background: rgba(255, 106, 106, 0.18);
+}
+
+.action-link--danger:hover {
+    background: rgba(255, 106, 106, 0.28);
+}
+
+@media (max-width: 960px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
